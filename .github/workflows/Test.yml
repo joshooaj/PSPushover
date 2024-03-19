@@ -3,7 +3,7 @@ name: Test
 on:
   push:
     tags:
-      - refs/tags/v*
+      - v*
     branches:
       - main
     paths-ignore:
