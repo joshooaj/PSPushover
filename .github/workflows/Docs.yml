@@ -18,10 +18,8 @@ jobs:
       pages: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          # Setting fetch-depth to 0 forces checkout to pull _all_ commit history which takes longer but can be
-          # useful when using mkdocs plugins that use git history to apply published/updated timestamps on pages.
           fetch-depth: 0
 
       - name: MkDocs GH-Deploy

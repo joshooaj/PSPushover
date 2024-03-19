@@ -23,6 +23,8 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Test
       shell: pwsh
       run: ./build.ps1 -Task Test -Bootstrap
