@@ -3,7 +3,7 @@ properties {
     # Set this to $true to create a module with a monolithic PSM1
     $PSBPreference.Build.CompileModule = $true
     $PSBPreference.Docs.RootDir = './docs'
-    $PSBPreference.General.ModuleVersion = (dotnet nbgv get-version -f json | ConvertFrom-Json).NuGetPackageVersion
+    $PSBPreference.General.ModuleVersion = (dotnet nbgv get-version -f json | ConvertFrom-Json).SimpleVersion
     $PSBPreference.Help.DefaultLocale = 'en-US'
     $PSBPreference.Test.OutputFile = 'out/testResults.xml'
     $PSBPreference.Test.ScriptAnalysis.SettingsPath = Join-Path $psake.build_script_dir 'PSScriptAnalyzerSettings.psd1'
