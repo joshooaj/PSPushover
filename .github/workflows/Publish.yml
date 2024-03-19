@@ -7,13 +7,6 @@ on:
       - completed
 
 jobs:
-  debug:
-    runs-on: ubuntu-latest
-    steps:
-      - name: ShowRef
-        shell: pwsh
-        run: Write-Host "github.ref = '${{ github.ref }}'"
-
   publish:
     if: |
       github.event.workflow_run.conclusion == 'success' &&
