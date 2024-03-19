@@ -1,11 +1,12 @@
-name: Publish Docs
+name: Docs
 
 on:
   push:
     branches:
       - main
     paths-ignore:
-      - .github/workflows/CI.yml
+      - .github/workflows/Test.yml
+      - .github/workflows/Publish.yml
       - tests/**
       - .vscode/**
 
