@@ -14,7 +14,7 @@
     AliasesToExport   = @()
     PrivateData       = @{
         PSData = @{
-            Tags       = @('notifications', 'pushover', 'push notifications')
+            Tags       = @('notifications', 'pushover')
             LicenseUri = 'https://github.com/joshooaj/PSPushover/blob/main/LICENSE'
             ProjectUri = 'https://github.com/joshooaj/PSPushover'
             # IconUri = ''
