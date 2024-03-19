@@ -2,6 +2,8 @@ name: Test
 
 on:
   push:
+    tags:
+      - refs/tags/v*
     branches:
       - main
     paths-ignore:
