@@ -1,0 +1,29 @@
+name: Publish Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - .github/workflows/CI.yml
+      - tests/**
+      - .vscode/**
+
+jobs:
+  DeployDocs:
+    # Grant the minimum permissions necessary for this job to publish to GitHub Pages
+    permissions:
+      contents: write
+      pages: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # Setting fetch-depth to 0 forces checkout to pull _all_ commit history which takes longer but can be
+          # useful when using mkdocs plugins that use git history to apply published/updated timestamps on pages.
+          fetch-depth: 0
+
+      - name: MkDocs GH-Deploy
+        if: github.ref == 'refs/heads/main'
+        shell: pwsh
+        run: .\build.ps1 -Bootstrap -Task PublishDocs

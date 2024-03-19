@@ -1,0 +1,29 @@
+{
+	"name": "PowerShell",
+	"dockerFile": "Dockerfile",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "usr/bin/bash",
+						"icon": "terminal-bash"
+					},
+					"zsh": {
+						"path": "usr/bin/zsh"
+					},
+					"pwsh": {
+						"path": "/usr/bin/pwsh",
+						"icon": "terminal-powershell"
+					}
+				},
+				"terminal.integrated.defaultProfile.linux": "pwsh"
+			},
+			"extensions": ["ms-vscode.powershell", "davidanson.vscode-markdownlint", "redhat.vscode-yaml"]
+		}
+	},
+	"postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+	"postStartCommand": "pwsh -c 'sudo chown -R \"$(id -u):$(id -g)\" $PWD; ./build.ps1 -Task Init -Bootstrap'",
+	"forwardPorts": [8000],
+	"remoteUser": "vscode"
+}

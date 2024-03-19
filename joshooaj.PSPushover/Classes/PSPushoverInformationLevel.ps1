@@ -1,0 +1,4 @@
+enum PSPushoverInformationLevel {
+    Detailed
+    Quiet
+}
