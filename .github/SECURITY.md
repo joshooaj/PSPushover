@@ -9,7 +9,6 @@ version, and the previous major version.
 | Version | Supported          |
 | ------- | ------------------ |
 | 0.1.x   | :white_check_mark: |
-| 0.1.15  | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
