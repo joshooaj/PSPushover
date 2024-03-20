@@ -1,3 +1,4 @@
+name: NotifyOnStarred
 on:
   watch:
     types: [started]

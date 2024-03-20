@@ -5,8 +5,9 @@ on:
     branches:
       - main
     paths-ignore:
-      - .github/workflows/Test.yml
+      - .github/workflows/NotifyOnStarred.yml
       - .github/workflows/Publish.yml
+      - .github/workflows/Test.yml
       - tests/**
       - .vscode/**
 

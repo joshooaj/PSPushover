@@ -8,6 +8,7 @@ on:
       - main
     paths-ignore:
       - .github/workflows/Docs.yml
+      - .github/workflows/NotifyOnStarred.yml
       - .github/workflows/Publish.yml
   pull_request:
     branches:
