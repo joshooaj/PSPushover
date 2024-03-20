@@ -16,7 +16,7 @@ jobs:
         run: |
           Import-Module ./joshooaj.PSPushover/joshooaj.PSPushover.psd1
           $msg = @{
-            Message    = 'Someone ⭐'d the repo 🎉'
+            Message    = 'Someone ⭐''d the repo 🎉'
             Sound      = 'magic'
             Attachment = [io.file]::ReadAllBytes((Resolve-Path ./docs/assets/images/star.png))
             FileName   = 'star.png'
