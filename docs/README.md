@@ -18,7 +18,7 @@ to a group of users. Get notified...
 
 ## Try it out
 
-When this GitHub repository receives a new star, it triggers a GitHub Action workflow which uses PSPushover to send a notification to anyone who subscribes using the link below.
+When this GitHub repository receives a new star, it triggers a GitHub Action [workflow](https://github.com/joshooaj/PSPushover/blob/main/.github/workflows/NotifyOnStarred.yml) which uses PSPushover to send a notification to anyone who subscribes using the link below.
 
 [Subscribe to Star Notifications](https://pushover.net/subscribe/PSPushover-2hw5raj6uqr5dsw)
 
