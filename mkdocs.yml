@@ -22,6 +22,11 @@ plugins:
   - search
   - awesome-pages
   - privacy
+  - social:
+    cards_layout_options:
+      font_family: Meow Script
+      color: "#ffffff"
+      background_color: "#4d9bea"
 
 markdown_extensions:
   - attr_list
