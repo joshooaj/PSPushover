@@ -15,7 +15,7 @@
         <link rel="next" href="en-US/Get-PushoverConfig/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="assets/images/joshooaj.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
     
     
@@ -116,8 +116,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="PSPushover" class="md-header__button md-logo" aria-label="PSPushover" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="assets/images/joshooaj.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -249,8 +248,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="." title="PSPushover" class="md-nav__button md-logo" aria-label="PSPushover" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="assets/images/joshooaj.png" alt="logo">
 
     </a>
     PSPushover
@@ -321,15 +319,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#try-it-out" class="md-nav__link">
@@ -636,15 +625,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#try-it-out" class="md-nav__link">
     <span class="md-ellipsis">
       Try it out
@@ -723,7 +703,6 @@
 
 
 <h1 id="pspushover">PSPushover</h1>
-<h2 id="overview">Overview</h2>
 <p>The PSPushover PowerShell module makes it a breeze to send push notifications to any device using the
 <a href="https://pushover.net">Pushover</a> service from PowerShell on Windows, Linux, and MacOS. You can send push notifications to Android, iOS, and
 desktop devices.</p>
@@ -734,14 +713,15 @@ to a group of users. Get notified...</p>
 <li>when cron jobs run</li>
 <li>when servers restart</li>
 <li>when your GitHub Actions / Azure DevOps / Jenkins / GitLab pipelines fail</li>
-<li>when your home automation detects a leak</li>
+<li><a href="https://github.com/joshooaj/PSPushover/blob/main/.github/workflows/NotifyOnStarred.yml">when someone star's your GitHub repo</a></li>
 <li><strong>whenever and for whatever you want!</strong></li>
 </ul>
-<h2 id="try-it-out">Try it out</h2>
+<h2 id="try-it-out"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18.09 11.77 1.47 6.33L14 14.74 8.44 18.1l1.46-6.33L5 7.5l6.47-.54L14 1l2.53 5.96L23 7.5l-4.91 4.27M2 12.43c.19 0 .38-.06.55-.17l3.2-2.11-1.57-1.36-2.73 1.8c-.461.3-.589.91-.29 1.41.2.27.52.43.84.43m-.84 9.12c.2.29.52.45.84.45.19 0 .38-.05.55-.16l4.11-2.71.34-1.37.31-1.45-5.86 3.85c-.461.31-.589.93-.29 1.39m.29-6.17a1 1 0 0 0-.29 1.38c.2.3.52.45.84.45.19 0 .38-.05.55-.16l5.42-3.55.27-1.19-.92-.81-5.87 3.88Z"/></svg></span> Try it out</h2>
+<p><img alt="Screenshot of Pushover notification on iOS" src="assets/images/example-notification.jpg" /></p>
 <p>When this GitHub repository receives a new star, it triggers a GitHub Action <a href="https://github.com/joshooaj/PSPushover/blob/main/.github/workflows/NotifyOnStarred.yml">workflow</a> which uses PSPushover to send a notification to anyone who subscribes using the link below.</p>
 <p><a href="https://pushover.net/subscribe/PSPushover-2hw5raj6uqr5dsw">Subscribe to Star Notifications</a></p>
 <p>Pushover will generate a random user token for you and add it to a distribution group. You can unsubscribe from your Pushover dashboard at any time, and your real user token is never exposed. So go ahead and try it out! If you already had the repo starred before subscribing, you can unstar and star it again as many times as you like.</p>
-<h2 id="getting-started">Getting started</h2>
+<h2 id="getting-started"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M208 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm-84.3 104.5c1-.4 1.9-.8 2.9-1.2l-16.9 63.5c-5.6 21.1-.1 43.6 14.7 59.7l70.7 77.1 22 88.1c4.3 17.1 21.7 27.6 38.8 23.3s27.6-21.7 23.3-38.8l-23-92.1c-1.9-7.8-5.8-14.9-11.2-20.8l-49.5-54 19.3-65.5 9.6 23c4.4 10.6 12.5 19.3 22.8 24.5l26.7 13.3c15.8 7.9 35 1.5 42.9-14.3s1.5-35-14.3-42.9L281 232.7l-15.3-36.8c-17.2-41.1-57.4-67.9-102-67.9-22.8 0-45.3 4.8-66.1 14l-8 3.5c-32.9 14.6-58.1 42.4-69.4 76.5l-2.6 7.8c-5.6 16.8 3.5 34.9 20.2 40.5s34.9-3.5 40.5-20.2l2.6-7.8c5.7-17.1 18.3-30.9 34.7-38.2l8-3.5zm-30 135.1-25 62.4-59.3 59.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l61.6-61.7c4.6-4.6 8.2-10.1 10.6-16.1l14.5-36.2-40.7-44.4c-2.5-2.7-4.8-5.6-7-8.6zm456.9-182.2c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l25.4 25.3H384c-17.7 0-32 14.3-32 32s14.3 32 32 32h146.7l-25.4 25.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l80-80c12.5-12.5 12.5-32.8 0-45.3l-80-80z"/></svg></span> Getting started</h2>
 <p>All Pushover notifications are sent from an <strong>application</strong> to a <strong>user</strong> or <strong>group</strong>. To send
 your first push notification, you need an <strong>application token</strong> and a <strong>user key</strong>. To receive
 notifications, you need the Pushover app installed on a mobile device, or at least have the website
