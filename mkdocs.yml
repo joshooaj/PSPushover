@@ -6,6 +6,11 @@ remote_branch: gh-pages
 
 theme:
   name: material
+  logo: assets/images/joshooaj.png
+  favicon: assets/images/joshooaj.png
+  font:
+    text: Roboto
+    code: Roboto Mono
   icon:
     repo: material/github
   palette:

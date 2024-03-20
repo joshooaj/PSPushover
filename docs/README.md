@@ -1,7 +1,5 @@
 # PSPushover
 
-## Overview
-
 The PSPushover PowerShell module makes it a breeze to send push notifications to any device using the
 [Pushover](https://pushover.net) service from PowerShell on Windows, Linux, and MacOS. You can send push notifications to Android, iOS, and
 desktop devices.
@@ -13,10 +11,12 @@ to a group of users. Get notified...
 - when cron jobs run
 - when servers restart
 - when your GitHub Actions / Azure DevOps / Jenkins / GitLab pipelines fail
-- when your home automation detects a leak
+- [when someone star's your GitHub repo](https://github.com/joshooaj/PSPushover/blob/main/.github/workflows/NotifyOnStarred.yml)
 - __whenever and for whatever you want!__
 
-## Try it out
+## :material-star-shooting: Try it out
+
+![Screenshot of Pushover notification on iOS](assets/images/example-notification.jpg)
 
 When this GitHub repository receives a new star, it triggers a GitHub Action [workflow](https://github.com/joshooaj/PSPushover/blob/main/.github/workflows/NotifyOnStarred.yml) which uses PSPushover to send a notification to anyone who subscribes using the link below.
 
@@ -24,7 +24,7 @@ When this GitHub repository receives a new star, it triggers a GitHub Action [wo
 
 Pushover will generate a random user token for you and add it to a distribution group. You can unsubscribe from your Pushover dashboard at any time, and your real user token is never exposed. So go ahead and try it out! If you already had the repo starred before subscribing, you can unstar and star it again as many times as you like.
 
-## Getting started
+## :fontawesome-solid-person-walking-arrow-right: Getting started
 
 All Pushover notifications are sent from an __application__ to a __user__ or __group__. To send
 your first push notification, you need an __application token__ and a __user key__. To receive
