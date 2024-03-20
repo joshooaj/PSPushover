@@ -2,8 +2,8 @@
 
 ## Overview
 
-The PSPushover PowerShell module makes it a breeze to send notifications to any device using the
-[Pushover](https://pushover.net) service. You can send push notifications to Android, iOS, and
+The PSPushover PowerShell module makes it a breeze to send push notifications to any device using the
+[Pushover](https://pushover.net) service from PowerShell on Windows, Linux, and MacOS. You can send push notifications to Android, iOS, and
 desktop devices.
 
 Each notification is associated with an "application", and can be sent to an individual user, or
@@ -22,7 +22,7 @@ When this GitHub repository receives a new star, it triggers a GitHub Action [wo
 
 [Subscribe to Star Notifications](https://pushover.net/subscribe/PSPushover-2hw5raj6uqr5dsw)
 
-Pushover will generate a random user token for you and add it to a distribution group. You can unsubscribe from your Pushover dashboard at any time, and your real user token is never exposed. So go ahead and try it out! If you already had the repo starred before subscribing to notifications, you can unstar and star it again.
+Pushover will generate a random user token for you and add it to a distribution group. You can unsubscribe from your Pushover dashboard at any time, and your real user token is never exposed. So go ahead and try it out! If you already had the repo starred before subscribing, you can unstar and star it again as many times as you like.
 
 ## Getting started
 
