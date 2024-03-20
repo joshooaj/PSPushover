@@ -24,7 +24,7 @@ plugins:
   - privacy
   - social:
       cards_layout_options:
-        font_family: Meow Script
+        font_family: Dancing Script
         color: "#ffffff"
         background_color: "#4d9bea"
 
