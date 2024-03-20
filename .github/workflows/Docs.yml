@@ -1,15 +1,13 @@
 name: Docs
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-    paths-ignore:
-      - .github/workflows/NotifyOnStarred.yml
-      - .github/workflows/Publish.yml
-      - .github/workflows/Test.yml
-      - tests/**
-      - .vscode/**
+    paths:
+      - docs/**
+      - mkdocs.yml
 
 jobs:
   DeployDocs:
