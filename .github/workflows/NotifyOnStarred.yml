@@ -1,0 +1,23 @@
+on:
+  watch:
+    types: [started]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: SendNotification
+        env:
+          PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
+          PUSHOVER_GROUP_TOKEN: ${{ secrets.PUSHOVER_GROUP_TOKEN }}
+        shell: pwsh
+        run: |
+          Import-Module ./joshooaj.PSPushover/joshooaj.PSPushover.psd1
+          $msg = @{
+            Title   = 'New Star!'
+            Message = 'Someone starred the repository!'
+            Token   = $env:PUSHOVER_APP_TOKEN | ConvertTo-SecureString -AsPlainText -Force
+            User    = $env:PUSHOVER_GROUP_TOKEN | ConvertTo-SecureString -AsPlainText -Force
+          }
+          Send-Pushover @msg
