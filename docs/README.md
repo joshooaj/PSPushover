@@ -16,6 +16,14 @@ to a group of users. Get notified...
 - when your home automation detects a leak
 - __whenever and for whatever you want!__
 
+## Try it out
+
+When this GitHub repository receives a new star, it triggers a GitHub Action workflow which uses PSPushover to send a notification to anyone who subscribes using the link below.
+
+[Subscribe to Star Notifications](https://pushover.net/subscribe/PSPushover-2hw5raj6uqr5dsw)
+
+Pushover will generate a random user token for you and add it to a distribution group. You can unsubscribe from your Pushover dashboard at any time, and your real user token is never exposed. So go ahead and try it out! If you already had the repo starred before subscribing to notifications, you can unstar and star it again.
+
 ## Getting started
 
 All Pushover notifications are sent from an __application__ to a __user__ or __group__. To send
