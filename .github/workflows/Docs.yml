@@ -8,6 +8,7 @@ on:
     paths:
       - docs/**
       - mkdocs.yml
+      - .github/workflows/Docs.yml
 
 jobs:
   DeployDocs:
