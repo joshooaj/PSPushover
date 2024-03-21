@@ -42,7 +42,7 @@ jobs:
         run: |
           $reqs = Import-PowerShellDataFile ./requirements.psd1
           $moduleNames = $reqs.Keys | Where-Object { $_ -ne 'PSDependOptions' -and $null -eq $reqs[$_].DependencyType }
-          $dependencyList = ($moduleNames | ForEach-Object { '{0}:{1}' -f $_, $reqs[$_].Version  }) -join ', '
+          $dependencyList = ($moduleNames | Sort-Object | ForEach-Object { '{0}:{1}' -f $_, $reqs[$_].Version  }) -join ', '
           "psdependencies=$dependencyList" >> $env:GITHUB_OUTPUT
 
       - name: Install and cache PowerShell modules
