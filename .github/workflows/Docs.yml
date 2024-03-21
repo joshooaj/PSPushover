@@ -49,7 +49,9 @@ jobs:
 
       - name: Cache docker image
         if: steps.image-cache.outputs.cache-hit != 'true'
+        shell: pwsh
         run: |
+            $null = New-Item .docker/ -ItemType Directory -Force
             docker pull squidfunk/mkdocs-material:9
             docker save -o ./.docker/mkdocs-material.tar squidfunk/mkdocs-material:9
 
