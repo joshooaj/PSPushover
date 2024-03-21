@@ -42,7 +42,6 @@ plugins:
         - img.shields.io/*
   - social:
       cards_layout_options:
-        font_family: Dancing Script
         color: "#ffffff"
         background_color: "#4d9bea"
 
