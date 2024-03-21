@@ -1,6 +1,7 @@
 name: Test
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - v*
@@ -26,15 +27,29 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - uses: actions/cache@v4
-      with:
-        key: ${{ runner.os }}-dotnet
-        path: .dotnet
+      - uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}
+          path: .cache
 
-    - name: Test
-      shell: pwsh
-      run: ./build.ps1 -Task Test -Bootstrap
+      - name: Load PSDepend Requirements
+        id: psdepend
+        shell: pwsh
+        run: |
+          $reqs = Import-PowerShellDataFile ./requirements.psd1
+          $moduleNames = $reqs.Keys | Where-Object { $_ -ne 'PSDependOptions' -and $null -eq $reqs[$_].DependencyType }
+          $dependencyList = ($moduleNames | ForEach-Object { '{0}:{1}' -f $_, $reqs[$_].Version  }) -join ', '
+          "psdependencies=$dependencyList" >> $env:GITHUB_OUTPUT
+
+      - name: Install and cache PowerShell modules
+        uses: potatoqualitee/psmodulecache@v6.0
+        with:
+          modules-to-cache: ${{ steps.psdepend.outputs.psdependencies }}
+
+      - name: Test
+        shell: pwsh
+        run: ./build.ps1 -Task Test -Bootstrap

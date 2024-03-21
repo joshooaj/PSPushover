@@ -25,11 +25,11 @@
     }
     'PythonRequirements' = @{
         DependencyType = 'Command'
-        Source         = 'pip install -qr requirements.txt'
+        Source         = 'pip install -qr requirements.txt --cache-dir .cache/pip/'
     }
     'DotnetCLI'          = @{
         DependencyType = 'DotnetSdk'
         Version        = '8.0.200'
-        Target         = './.dotnet/'
+        Target         = './.cache/dotnet/'
     }
 }
