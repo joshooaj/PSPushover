@@ -29,6 +29,12 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
+
+    - uses: actions/cache@v4
+      with:
+        key: ${{ runner.os }}-dotnet
+        path: .dotnet
+
     - name: Test
       shell: pwsh
       run: ./build.ps1 -Task Test -Bootstrap

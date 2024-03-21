@@ -17,6 +17,12 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
+
+    - uses: actions/cache@v4
+      with:
+        key: ${{ runner.os }}-dotnet
+        path: .dotnet
+
     - name: Publish
       env:
         PSGALLERY_API_KEY: ${{ secrets.PSGALLERY_API_KEY }}

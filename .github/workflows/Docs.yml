@@ -21,6 +21,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-dotnet
+          path: .dotnet
+
+      - uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-mkdocs
+          path: .cache
+
       - name: MkDocs GH-Deploy
         if: github.ref == 'refs/heads/main'
         shell: pwsh
