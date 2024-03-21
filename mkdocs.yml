@@ -37,7 +37,9 @@ theme:
 plugins:
   - search
   - awesome-pages
-  - privacy
+  - privacy:
+      assets_exclude:
+        - img.shields.io/*
   - social:
       cards_layout_options:
         font_family: Dancing Script
