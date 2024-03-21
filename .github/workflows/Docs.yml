@@ -41,6 +41,21 @@ jobs:
         with:
           modules-to-cache: ${{ steps.psdepend.outputs.psdependencies }}
 
+      - id: image-cache
+        uses: actions/cache@v4
+        with:
+          key: ${{ runner.os }}-docker-cache
+          path: .docker
+
+      - name: Cache docker image
+        if: steps.image-cache.outputs.cache-hit != 'true'
+        run: |
+            docker pull squidfunk/mkdocs-material:9
+            docker save -o ./.docker/mkdocs-material.tar squidfunk/mkdocs-material:9
+
+      - if: steps.image-cache.outputs.cache-hit == 'true'
+        run: docker load -i ./.docker/mkdocs-material.tar
+
       - name: MkDocs GH-Deploy
         if: github.ref == 'refs/heads/main'
         shell: pwsh

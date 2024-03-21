@@ -8,3 +8,5 @@ testResults.xml
 .dotnet/
 
 .cache/
+
+.docker/
