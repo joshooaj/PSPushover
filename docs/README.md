@@ -6,6 +6,7 @@
 ![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/joshooaj.PSPushover)
 ![PowerShell Gallery Downloads](https://img.shields.io/powershellgallery/dt/joshooaj.PSPushover)
 ![GitHub License](https://img.shields.io/github/license/joshooaj/PSPushover)
+[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
 
 The PSPushover PowerShell module makes it a breeze to send push notifications to any device using the
 [Pushover](https://pushover.net) service from PowerShell on Windows, Linux, and MacOS. You can send push notifications to Android, iOS, and
