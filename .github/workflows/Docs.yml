@@ -22,7 +22,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/cache@v4
+      - uses: actions/cache@v4.2.3
         with:
           key: ${{ runner.os }}
           path: .cache
@@ -42,7 +42,7 @@ jobs:
           modules-to-cache: ${{ steps.psdepend.outputs.psdependencies }}
 
       - id: image-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v4.2.3
         with:
           key: ${{ runner.os }}-docker-cache
           path: .docker
