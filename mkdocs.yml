@@ -37,9 +37,6 @@ theme:
 plugins:
   - search
   - awesome-pages
-  - privacy:
-      assets_exclude:
-        - img.shields.io/*
   - social:
       cards_layout_options:
         color: "#ffffff"
