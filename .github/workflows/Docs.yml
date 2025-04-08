@@ -37,7 +37,7 @@ jobs:
           "psdependencies=$dependencyList" >> $env:GITHUB_OUTPUT
 
       - name: Install and cache PowerShell modules
-        uses: potatoqualitee/psmodulecache@v6.0
+        uses: potatoqualitee/psmodulecache@v6.2
         with:
           modules-to-cache: ${{ steps.psdepend.outputs.psdependencies }}
 
