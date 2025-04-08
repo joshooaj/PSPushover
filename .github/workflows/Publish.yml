@@ -32,10 +32,10 @@ jobs:
           $dependencyList = ($moduleNames | Sort-Object | ForEach-Object { '{0}:{1}' -f $_, $reqs[$_].Version  }) -join ', '
           "psdependencies=$dependencyList" >> $env:GITHUB_OUTPUT
 
-      - name: Install and cache PowerShell modules
-        uses: potatoqualitee/psmodulecache@v6.2
-        with:
-          modules-to-cache: ${{ steps.psdepend.outputs.psdependencies }}
+      # - name: Install and cache PowerShell modules
+      #   uses: potatoqualitee/psmodulecache@v6.2
+      #   with:
+      #     modules-to-cache: ${{ steps.psdepend.outputs.psdependencies }}
 
       - name: Publish
         env:
